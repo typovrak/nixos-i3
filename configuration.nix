@@ -5,11 +5,37 @@ let
 	group = config.users.users.${username}.group or "users";
 	home = config.users.users.${username}.home;
 in {
+	system.activationScripts.i3 = ''
+		mkdir -p ${home}/.config
+		chown ${username}:${group} ${home}/.config
+		chmod 700 ${home}/.config
+
+		rm -rf ${home}/.config/i3
+		mkdir ${home}/.config/i3
+		chown ${username}:${group} ${home}/.config/i3
+		chmod 700 ${home}/.config/i3
+
+		cp ${./config} ${home}/.config/i3/config
+		chown ${username}:${group} ${home}/.config/i3/config
+		chmod 600 ${home}/.config/i3/config
+	'';
+
 	environment = {
 		systemPackages = with pkgs; [
 			dmenu
 			feh
+			playerctl
+			pactl
+			i3lock-color
+			pamixer
+			alacritty
+			brightnessctl
+			maim
+			chromium
+			nautilus
+			pavucontrol
 		];
+		etc."wallpapers/i3.png".source = ./i3.png;
 	};
 
 	fonts = {
