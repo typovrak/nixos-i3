@@ -25,7 +25,6 @@ in {
 			dmenu
 			feh
 			playerctl
-			pactl
 			i3lock-color
 			pamixer
 			alacritty
