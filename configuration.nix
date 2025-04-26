@@ -31,7 +31,7 @@ in {
 			brightnessctl
 			maim
 			chromium
-			nautilus
+			nemo
 			pavucontrol
 		];
 		etc."wallpapers/i3.png".source = ./i3.png;

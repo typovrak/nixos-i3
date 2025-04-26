@@ -217,6 +217,6 @@ bindsym Shift+Print exec --no-startup-id maim --format=png --select | xclip -sel
 
 bindsym $mod+c exec chromium
 
-bindsym $mod+n exec nautilus
+bindsym $mod+n exec nemo
 
 bindsym $mod+p exec pavucontrol
