@@ -6,6 +6,9 @@ let
 	home = config.users.users.${username}.home;
 in {
 	system.activationScripts.i3 = ''
+		# remove this file that scale out my desktop entirely
+		rm -rf .Xresources
+		
 		mkdir -p ${home}/.config
 		chown ${username}:${group} ${home}/.config
 		chmod 700 ${home}/.config
