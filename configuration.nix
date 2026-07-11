@@ -57,6 +57,7 @@ in {
 			variant = "altgr-intl";
 		};
 		videoDrivers = [ "nvidia" ];
+		dpi = 100;
 	};
 
 	hardware.nvidia = {

@@ -213,3 +213,6 @@ bindsym $mod+p exec --no-startup-id pavucontrol
 
 bindsym $mod+m exec --no-startup-id xrandr --output HDMI-0 --auto --left-of eDP-1-1
 bindsym $mod+Shift+m exec --no-startup-id xrandr --output HDMI-0 --off
+
+# setup screen dpi
+exec_always --no-startup-id xrandr --dpi 100
