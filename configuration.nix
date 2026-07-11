@@ -63,7 +63,7 @@ in {
 		modesetting.enable = true;
   		nvidiaSettings = true;
   		powerManagement.enable = true;
-  		open = true;
+  		open = false;
   		prime = {
     		sync.enable = true;
     		intelBusId = "PCI:0:2:0";
